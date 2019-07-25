@@ -23,3 +23,19 @@ h2 {
 .recipe_item {
     width: 50%;
 }
+
+.list_title {
+    font-weight: 600;
+}
+
+.list_content {
+    width: fit-content;
+    height: fit-content;
+}
+
+.search_bar {
+    width: 70%;
+    margin: 1rem 0;
+    height: 1.3rem;
+    border-radius: 0.2rem;
+}

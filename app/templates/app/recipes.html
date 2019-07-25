@@ -1,25 +1,21 @@
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}">
-
-
-
-
+<script src="{% static 'app/main.js' %}"></script>
 
 <div class="container">
     <h1>Recipes</h1>
 
-    <input type="text">
+    <input type="text" class="search_bar">
+
     <div class="list_item">
-            <p class="recipe_item">"Recipe "</p>
-            <p class="recipe_item">{{ recipe.author }}</p>
+        <p class="recipe_item list_title">Recipe</p>
+        <p class="recipe_item list_title">Creator</p>
     </div>
     <div class="list_container">
-        
         {% for recipe in recipes %}
             {% include 'app/list_item.html' %}
         {% endfor %}
-        
     </div>
 </div>
 
