@@ -48,9 +48,11 @@ def recipe(request, recipe_id):
 def filter(request):
     text_filter = request.GET.get('filter_text')
     recipes = models.Recipe.filter_recipe(text_filter)
-    recipes_html = ""
+    recipes_html = "No results for " + text_filter
     if recipes:
         recipes_html = loader.render_to_string('app/recipes_list.html', {'recipes': recipes})
+        
+            
 
     response_data = {
         'recipes_html': recipes_html
