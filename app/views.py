@@ -21,16 +21,16 @@ def recipes(request):
 
 def recipe(request, recipe_id):
     recipe = models.Recipe.objects.get(id=recipe_id)
-    ingredients_list = recipe.ingredients.split("\n")
+    ingredients_list = recipe.ingredients.split("\\n")
     for i in range(len(ingredients_list)):
         ingredient = ingredients_list[i]
-        ingredient = ingredient.replace("\n", "")
+        ingredient = ingredient.replace("\\n", "")
         ingredients_list[i] = ingredient
 
-    directions_list = recipe.directions.split("\n")
+    directions_list = recipe.directions.split("\\n")
     for i in range(len(directions_list)):
         direction = directions_list[i]
-        direction = direction.replace("\n", "")
+        direction = direction.replace("\\n", "")
         directions_list[i] = direction
     
     context = (
