@@ -1,8 +1,14 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}">
+
+
+<h1>Receipts</h1>
+
 <div class="list_container">
+    <ul>
     {% for receipt in receipts %}
-    
-        {{receipt.name}}
-
+        <li><a href="{% url 'receipt' receipt.id %}">{{receipt.name}}</a></li>
     {% endfor %}
-
+    </ul>
 </div>
