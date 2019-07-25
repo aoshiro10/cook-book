@@ -2,3 +2,24 @@
 ul {
     list-style-type: none;
 }
+
+h1 {
+    color: #5cc46f;
+}
+
+h2 {
+    color: #5cc46f;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.list_item {
+    display: flex;
+}
+
+.recipe_item {
+    width: 50%;
+}

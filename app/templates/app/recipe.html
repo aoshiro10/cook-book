@@ -1,0 +1,29 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}">
+
+<div class="container">
+    <div class="recipe_div">
+        <h1 class="recipe_name">{{ recipe.name.upper }}</h1>
+        <p class="author_name">{{ recipe.author }}</p>
+        <p>Prep Time: {{ recipe.prep_time }}</p>
+        <p>Cook Time: {{ recipe.cook_time }}</p>
+        <h2>INGREDIENTS</h2>
+        <ul>
+            {% for ingredient in ingredients %}
+                <li>{{ ingredient }}</li>
+            {% endfor %}
+        </ul>
+        <h2>DIRECTIONS</h2>
+        <ul>
+            {% for direction in directions %}
+                <li>{{ direction }}</li>
+            {% endfor %}
+        </ul>
+        
+        <br>
+        <a href="{% url 'recipes' %}">Show all</a>
+    </div>
+</div>
+
+

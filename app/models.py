@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Receipt(models.Model):
+class Recipe(models.Model):
     name = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
     author = models.CharField(max_length=200)
