@@ -10,3 +10,9 @@ class Recipe(models.Model):
     ingredients = models.TextField()
     directions = models.TextField()
     
+    @classmethod
+    def filter_recipe(cls, search_text=""):
+        recipes = cls.objects.filter(
+            name__icontains=search_text
+        ).order_by('name')
+        return recipes

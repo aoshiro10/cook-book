@@ -1,21 +1,25 @@
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 <script src="{% static 'app/main.js' %}"></script>
+
 
 <div class="container">
     <h1>Recipes</h1>
-
     <input type="text" class="search_bar">
 
     <div class="list_item">
         <p class="recipe_item list_title">Recipe</p>
         <p class="recipe_item list_title">Creator</p>
     </div>
-    <div class="list_container">
-        {% for recipe in recipes %}
-            {% include 'app/list_item.html' %}
-        {% endfor %}
+    <div class="div_list">
+        {% include 'app/recipes_list.html' %}
     </div>
+    
+
 </div>
 
